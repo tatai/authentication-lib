@@ -1,0 +1,19 @@
+{
+	"name": "@tatai/authentication-lib",
+	"version": "0.0.1",
+	"description": "Browser-only OAuth2/OpenID Connect library with automatic token refresh and authenticated HTTP client. No external dependencies.",
+	"author": "Fran Naranjo <fran.naranjo@gmail.com> (https://tatai.es)",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
+	"scripts": {
+		"build": "tsup src/index.ts --format esm --dts"
+	},
+	"devDependencies": {
+		"typescript": "~5.7.0",
+		"tsup": "~8.4.0"
+	}
+}

@@ -1,0 +1,11 @@
+/node_modules
+/dist
+/.npmrc
+
+.idea
+.vscode
+*.suo
+*.sln
+*.sw?
+*.iml
+.DS_Store
