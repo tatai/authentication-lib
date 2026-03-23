@@ -9,7 +9,8 @@ async function unauthenticatedPost(url: string, body: object): Promise<any> {
 		error.response = { status: response.status };
 		throw error;
 	}
-	return { data: await response.json() };
+	const text = await response.text();
+	return { data: text ? JSON.parse(text) : null };
 }
 
 export { unauthenticatedPost };

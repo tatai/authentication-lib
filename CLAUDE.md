@@ -30,6 +30,21 @@ The flow connects three layers:
 
 Public exports: `Authentication` class, `AuthenticatedHttpClient` class, `isAuthenticated` function.
 
+## Code style
+
+- All control flow statements (`if`, `else`, `for`, `while`, etc.) **must always use curly braces**, even when the body is a single line.
+- The opening brace goes on the same line as the statement; the closing brace goes on its own line.
+
+```ts
+// Correct
+if (condition) {
+    doSomething();
+}
+
+// Wrong
+if (condition) doSomething();
+```
+
 ## Key design notes
 
 - `isAuthenticated()` is purely a localStorage presence check — it does not validate token expiry.
