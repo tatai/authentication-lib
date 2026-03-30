@@ -65,7 +65,8 @@ export default class AuthenticatedHttpClient {
 			error.response = { status: response.status };
 			throw error;
 		}
-		return { data: await response.json() };
+		const text = await response.text();
+		return { data: text ? JSON.parse(text) : null };
 	}
 
 	get = (requestUrl: string, params = null, responseType = 'json', headers = {}): Promise<any> => {
